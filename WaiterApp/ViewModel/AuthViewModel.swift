@@ -9,9 +9,9 @@ import Observation
 import SwiftUI
 
 @Observable
-final class LoginViewModel {
+final class AuthViewModel {
     var user = User()
-    var messageError = ""
+    var messageError: MyError?
     private let numberSuccses = "1234"
     private let pinSuccses = "1234"
     var isAuth = true

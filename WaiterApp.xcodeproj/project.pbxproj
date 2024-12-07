@@ -9,10 +9,17 @@
 /* Begin PBXBuildFile section */
 		E219FF202CFC6F4000530843 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219FF1F2CFC6F4000530843 /* Error.swift */; };
 		E29C69E32CFDAEAD0052888F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C69E22CFDAEAD0052888F /* User.swift */; };
-		E29C69E52CFDAF070052888F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C69E42CFDAF070052888F /* LoginViewModel.swift */; };
-		E29C69EF2CFE11350052888F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C69EC2CFE11350052888F /* LoginView.swift */; };
-		E29C69F02CFE11350052888F /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C69ED2CFE11350052888F /* OrdersView.swift */; };
-		E2F712EA2CF2344C008AD714 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F712E72CF2344C008AD714 /* ContentView.swift */; };
+		E29C69E52CFDAF070052888F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C69E42CFDAF070052888F /* AuthViewModel.swift */; };
+		E29C69EF2CFE11350052888F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C69EC2CFE11350052888F /* AuthView.swift */; };
+		E29C69F02CFE11350052888F /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C69ED2CFE11350052888F /* TableView.swift */; };
+		E2A59A242D01E729001EB7D5 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A59A232D01E729001EB7D5 /* Dish.swift */; };
+		E2A59A262D01ED68001EB7D5 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A59A252D01ED68001EB7D5 /* Table.swift */; };
+		E2A59A292D01F175001EB7D5 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A59A282D01F175001EB7D5 /* TableCell.swift */; };
+		E2A59A2B2D01F1C4001EB7D5 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A59A2A2D01F1C4001EB7D5 /* TableViewModel.swift */; };
+		E2A59A2D2D01FA62001EB7D5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2A59A2C2D01FA62001EB7D5 /* Montserrat-Bold.ttf */; };
+		E2C240CF2D0463F1003FC4B1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C240CE2D0463F1003FC4B1 /* Coordinator.swift */; };
+		E2C240D12D047826003FC4B1 /* TableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C240D02D047826003FC4B1 /* TableCellViewModel.swift */; };
+		E2F712EA2CF2344C008AD714 /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F712E72CF2344C008AD714 /* RouteView.swift */; };
 		E2F712EB2CF2344C008AD714 /* WaiterAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F712E82CF2344C008AD714 /* WaiterAppApp.swift */; };
 		E2F712EC2CF2344C008AD714 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2F712E42CF2344C008AD714 /* Preview Assets.xcassets */; };
 		E2F712ED2CF2344C008AD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2F712E62CF2344C008AD714 /* Assets.xcassets */; };
@@ -22,13 +29,20 @@
 /* Begin PBXFileReference section */
 		E219FF1F2CFC6F4000530843 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		E29C69E22CFDAEAD0052888F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E29C69E42CFDAF070052888F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		E29C69EC2CFE11350052888F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		E29C69ED2CFE11350052888F /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
+		E29C69E42CFDAF070052888F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E29C69EC2CFE11350052888F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		E29C69ED2CFE11350052888F /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		E2A59A232D01E729001EB7D5 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		E2A59A252D01ED68001EB7D5 /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		E2A59A282D01F175001EB7D5 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		E2A59A2A2D01F1C4001EB7D5 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		E2A59A2C2D01FA62001EB7D5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		E2C240CE2D0463F1003FC4B1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E2C240D02D047826003FC4B1 /* TableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellViewModel.swift; sourceTree = "<group>"; };
 		E2F712D32CF23441008AD714 /* WaiterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaiterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F712E42CF2344C008AD714 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2F712E62CF2344C008AD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E2F712E72CF2344C008AD714 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E2F712E72CF2344C008AD714 /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
 		E2F712E82CF2344C008AD714 /* WaiterAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaiterAppApp.swift; sourceTree = "<group>"; };
 		E2F712F12CF25AEA008AD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2F712F42CF25B10008AD714 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -57,6 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				E29C69E22CFDAEAD0052888F /* User.swift */,
+				E2A59A232D01E729001EB7D5 /* Dish.swift */,
+				E2A59A252D01ED68001EB7D5 /* Table.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -64,7 +80,10 @@
 		E29C69E12CFDA4730052888F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E29C69E42CFDAF070052888F /* LoginViewModel.swift */,
+				E2C240CE2D0463F1003FC4B1 /* Coordinator.swift */,
+				E29C69E42CFDAF070052888F /* AuthViewModel.swift */,
+				E2A59A2A2D01F1C4001EB7D5 /* TableViewModel.swift */,
+				E2C240D22D0479CC003FC4B1 /* Components */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -80,11 +99,28 @@
 		E29C69EE2CFE11350052888F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E2F712E72CF2344C008AD714 /* ContentView.swift */,
-				E29C69ED2CFE11350052888F /* OrdersView.swift */,
-				E29C69EC2CFE11350052888F /* LoginView.swift */,
+				E2F712E72CF2344C008AD714 /* RouteView.swift */,
+				E29C69ED2CFE11350052888F /* TableView.swift */,
+				E29C69EC2CFE11350052888F /* AuthView.swift */,
+				E2A59A272D01F131001EB7D5 /* Components */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E2A59A272D01F131001EB7D5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E2A59A282D01F175001EB7D5 /* TableCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E2C240D22D0479CC003FC4B1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E2C240D02D047826003FC4B1 /* TableCellViewModel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		E2F712CA2CF23441008AD714 = {
@@ -131,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				E2F712F42CF25B10008AD714 /* Montserrat-Regular.ttf */,
+				E2A59A2C2D01FA62001EB7D5 /* Montserrat-Bold.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -197,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A59A2D2D01FA62001EB7D5 /* Montserrat-Bold.ttf in Resources */,
 				E2F712F52CF25B10008AD714 /* Montserrat-Regular.ttf in Resources */,
 				E2F712EC2CF2344C008AD714 /* Preview Assets.xcassets in Resources */,
 				E2F712ED2CF2344C008AD714 /* Assets.xcassets in Resources */,
@@ -210,12 +248,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A59A292D01F175001EB7D5 /* TableCell.swift in Sources */,
 				E29C69E32CFDAEAD0052888F /* User.swift in Sources */,
-				E29C69EF2CFE11350052888F /* LoginView.swift in Sources */,
-				E29C69F02CFE11350052888F /* OrdersView.swift in Sources */,
-				E2F712EA2CF2344C008AD714 /* ContentView.swift in Sources */,
+				E2A59A2B2D01F1C4001EB7D5 /* TableViewModel.swift in Sources */,
+				E29C69EF2CFE11350052888F /* AuthView.swift in Sources */,
+				E29C69F02CFE11350052888F /* TableView.swift in Sources */,
+				E2A59A262D01ED68001EB7D5 /* Table.swift in Sources */,
+				E2F712EA2CF2344C008AD714 /* RouteView.swift in Sources */,
+				E2C240D12D047826003FC4B1 /* TableCellViewModel.swift in Sources */,
 				E219FF202CFC6F4000530843 /* Error.swift in Sources */,
-				E29C69E52CFDAF070052888F /* LoginViewModel.swift in Sources */,
+				E2C240CF2D0463F1003FC4B1 /* Coordinator.swift in Sources */,
+				E2A59A242D01E729001EB7D5 /* Dish.swift in Sources */,
+				E29C69E52CFDAF070052888F /* AuthViewModel.swift in Sources */,
 				E2F712EB2CF2344C008AD714 /* WaiterAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

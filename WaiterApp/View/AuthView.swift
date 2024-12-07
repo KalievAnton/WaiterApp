@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct LoginView: View {
-    @Bindable var viewModel: LoginViewModel
+struct AuthView: View {
+    @Bindable var coordinator: Coordinator
+    @State private var viewModel = AuthViewModel()
     @State private var isShowAlert: Bool = false
     
     var body: some View {
@@ -42,9 +43,10 @@ struct LoginView: View {
                 do {
                     try viewModel.checkAuth(number: viewModel.user.number,
                                                  pin: viewModel.user.pin)
+                    
                 } catch {
                     if let error = error as? MyError {
-                        viewModel.messageError = error.localizedDescription
+                        viewModel.messageError = error
                     }
                     isShowAlert = true
                 }
@@ -65,8 +67,10 @@ struct LoginView: View {
         }
         .animation(.bouncy, value: viewModel.isAuth)
         
-        .alert(viewModel.messageError, isPresented: $isShowAlert) {
+        .alert(viewModel.messageError?.localizedDescription ?? "", isPresented: $isShowAlert) {
             Button("OK") { }
+        } message: {
+            Text(viewModel.messageError?.failureReason ?? "")
         }
     }
 }
@@ -101,5 +105,5 @@ extension View {
 }
 
 #Preview {
-    LoginView(viewModel: LoginViewModel())
+    AuthView(coordinator: Coordinator())
 }

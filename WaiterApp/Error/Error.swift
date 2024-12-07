@@ -12,7 +12,7 @@ enum MyError: LocalizedError {
     case invalidPin
     case emptyField
     
-    var localizedDescription: String {
+    var localizedDescription: String? {
         switch self {
         case .invalidNumber: "Ошибка номера!"
         case .invalidPin: "Ошибка пин-кода!"
