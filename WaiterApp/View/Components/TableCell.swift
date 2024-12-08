@@ -8,23 +8,21 @@
 import SwiftUI
 
 struct TableCell: View {
-//    @State var viewModel: TableCellViewModel
+    @State var viewModel: TableCellViewModel
     
     var body: some View {
         VStack {
             VStack(alignment: .center) {
-                Text("Стол 1")
+                Text(viewModel.numberDesciption)
                     .font(.custom("Montserrat-Bold", size: 16))
                     .foregroundColor(Color.black)
                    
-                Text("Гостей: 1")
-                    .font(.custom("Montserrat-Regular", size: 16))
-                    .foregroundColor(Color.black)
+                Text(viewModel.guestDescription)
+                    .customStyle()
                     .padding(12)
                     
-                Text("Чек: 840 ₽")
-                    .font(.custom("Montserrat-Regular", size: 16))
-                    .foregroundColor(Color.black)
+                Text(viewModel.cashDescription)
+                    .customStyle()
                     
             }
             
@@ -35,6 +33,18 @@ struct TableCell: View {
     }
 }
 
+struct StyleViewModifire: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.custom("Montserrat-Regular", size: 16))
+            .foregroundColor(Color.black)
+    }
+}
+
+extension View {
+    func customStyle() -> some View { modifier(StyleViewModifire()) }
+}
+
 #Preview {
-    TableCell()
+    TableCell(viewModel: .init(table: Table()))
 }

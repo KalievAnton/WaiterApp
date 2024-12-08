@@ -51,7 +51,7 @@ struct AuthView: View {
                     isShowAlert = true
                 }
             } label: {
-                Text(viewModel.isAuth ? "Далее": "Войти")
+                Text(viewModel.isAuth ? "Далее" : "Войти")
                     .frame(maxWidth: .infinity, maxHeight: 44)
                     .background(Color.button)
                     .customStyleTxtBtn()

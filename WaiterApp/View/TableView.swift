@@ -16,13 +16,26 @@ struct TableView: View {
         ZStack {
             Image(.bg)
                 .scaleEffect(1.1)
+            HStack {
+                    Text("ИТОГО:")
+                        .font(.custom("Montserrat-Bold", size: 24))
+                        .foregroundStyle(.white)
+                        .padding(.leading, 16)
+                    Spacer()
+                    Text("3300 ₽")
+                        .font(.custom("Montserrat-Bold", size: 24))
+                        .foregroundStyle(.white)
+                        .padding(.trailing, 16)
+            }
             ScrollView {
-                
+                LazyVGrid(columns: layout) {
+                        TableCell(viewModel: .init(table: Table()))
+                }
             }
         }
     }
 }
 
 #Preview {
-    TableView(coordinator: .init(), viewModel: .init(user: .init()))
+    TableView(coordinator: .init(), viewModel: .init(user: .init(), table: .init()))
 }

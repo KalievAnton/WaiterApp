@@ -13,7 +13,7 @@ class TableCellViewModel {
     var table: Table
     var numberDesciption: String { "Cтол \(table.number)" }
     var guestDescription: String { "Гостей: \(table.guest) " }
-    var cashDescription: String { "Чек: \(table.cash)" }
+    var cashDescription: String { "Чек: \(table.cash) ₽" }
     
     init(table: Table) {
         self.table = table
