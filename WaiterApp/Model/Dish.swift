@@ -8,7 +8,7 @@
 import Foundation
 
 
-class Dish {
+class Dish: Identifiable {
     let id: String = UUID().uuidString
     let title: String
     let price: Int
@@ -29,7 +29,7 @@ extension Dish {
             .init(title: "Шашлык из свинины",
                   price: 400,
                   description: "Шашлык подается с овощами и соусом на выбор",
-                  amount: 0),
+                  amount: 2),
             .init(title: "Шаурма",
                   price: 250,
                   description: "Шаурма из курицы в тонком лаваше собственного производства",
@@ -41,10 +41,10 @@ extension Dish {
             .init(title: "Салат Цезарь",
                   price: 450,
                   description: "Фирменный салат где основной ингредиент предлагается на выбор",
-                  amount: 0),
+                  amount: 2),
             .init(title: "Морс",
                   price: 150, description: "Морс собственного производства из смородины",
-                  amount: 0)
+                  amount: 4)
         ]
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AuthView: View {
-    @Bindable var coordinator: Coordinator
+    @Binding var coordinator: Coordinator
     @State private var viewModel = AuthViewModel()
     @State private var isShowAlert: Bool = false
     
@@ -40,15 +40,22 @@ struct AuthView: View {
             }
             
             Button {
-                do {
-                    try viewModel.checkAuth(number: viewModel.user.number,
-                                                 pin: viewModel.user.pin)
-                    
-                } catch {
-                    if let error = error as? MyError {
-                        viewModel.messageError = error
+                switch viewModel.isAuth {
+                case true:
+                    do {
+                        try viewModel.checkNumber(number: viewModel.user.number)
+                    } catch {
+                        if let error = error as? MyError { viewModel.messageError = error }
+                        isShowAlert = true
                     }
-                    isShowAlert = true
+                    case false:
+                    do {
+                        try viewModel.checkPin(pin: viewModel.user.pin)
+                        coordinator.appState = .authorized(user: viewModel.user)
+                    } catch {
+                        if let error = error as? MyError { viewModel.messageError = error }
+                        isShowAlert = true
+                    }
                 }
             } label: {
                 Text(viewModel.isAuth ? "Далее" : "Войти")
@@ -57,10 +64,9 @@ struct AuthView: View {
                     .customStyleTxtBtn()
             }
         }
-        
-            .padding(.horizontal, 48)
-            .offset(y: -160)
-            .background {
+        .padding(.horizontal, 48)
+        .offset(y: -160)
+        .background {
             Image(.bg)
                 .scaleEffect(1.1)
                 .opacity(0.7)
@@ -105,5 +111,5 @@ extension View {
 }
 
 #Preview {
-    AuthView(coordinator: Coordinator())
+    AuthView(coordinator: .constant(Coordinator()))
 }

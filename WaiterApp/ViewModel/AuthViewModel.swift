@@ -15,26 +15,25 @@ final class AuthViewModel {
     private let numberSuccses = "1234"
     private let pinSuccses = "1234"
     var isAuth = true
-    var showOrdersView = false
+    var showOrders = false
+    weak var coordinator: Coordinator?
     
-    func checkAuth(number: String, pin: String) throws {
-        switch isAuth {
-        case true:
-            guard !number.isEmpty else { throw MyError.emptyField }
-            guard number == numberSuccses else { throw MyError.invalidNumber }
-            isAuth = false
-        case false:
-            guard !pin.isEmpty || !number.isEmpty else { throw MyError.emptyField }
-            guard pin == pinSuccses else { throw MyError.invalidPin }
-            guard number == numberSuccses else { throw MyError.invalidNumber }
-            showOrdersView = true
-        }
+    func checkNumber(number: String) throws {
+        guard !number.isEmpty else { throw MyError.emptyField }
+        guard number == numberSuccses else { throw MyError.invalidNumber }
+        isAuth = false
     }
     
+    func checkPin(pin: String) throws {
+        guard !pin.isEmpty else { throw MyError.emptyField }
+        guard pin == pinSuccses else { throw MyError.invalidPin }
+        showOrders = false
+    }
+
     func logOut() {
         user.number = ""
         user.pin = ""
         
-        withAnimation { showOrdersView.toggle() }
+        withAnimation { showOrders = false }
     }
 }

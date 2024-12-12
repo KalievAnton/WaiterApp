@@ -8,34 +8,42 @@
 import SwiftUI
 
 struct TableView: View {
-    @Bindable var coordinator: Coordinator
+    @Binding var coordinator: Coordinator
     @State var viewModel: TableViewModel
     let layout: [GridItem] = [.init(), .init()]
     
     var body: some View {
-        ZStack {
-            Image(.bg)
-                .scaleEffect(1.1)
-            HStack {
-                    Text("ИТОГО:")
-                        .font(.custom("Montserrat-Bold", size: 24))
-                        .foregroundStyle(.white)
-                        .padding(.leading, 16)
-                    Spacer()
-                    Text("3300 ₽")
-                        .font(.custom("Montserrat-Bold", size: 24))
-                        .foregroundStyle(.white)
-                        .padding(.trailing, 16)
-            }
+        VStack {
             ScrollView {
                 LazyVGrid(columns: layout) {
-                        TableCell(viewModel: .init(table: Table()))
+                    ForEach(viewModel.table) { table in
+                        TableCell(viewModel: .init(table: table))
+                            .background(table.isTable ? Color.table1 : Color.table2)
+                            .clipShape(.rect(cornerRadius: 20))
+                    }
                 }
             }
+            HStack {
+                Text("ИТОГО:")
+                    .font(.custom("Montserrat-Bold", size: 24))
+                    .foregroundStyle(.white)
+                    .padding(.leading, 16)
+                Spacer()
+                Text(viewModel.totalDescription)
+                    .font(.custom("Montserrat-Bold", size: 24))
+                    .foregroundStyle(.white)
+                    .padding(.trailing, 16)
+            }
+        }
+        .background {
+            Image(.bg)
+                .resizable()
+                .ignoresSafeArea()
+                .scaleEffect()
         }
     }
 }
 
 #Preview {
-    TableView(coordinator: .init(), viewModel: .init(user: .init(), table: .init()))
+    TableView(coordinator: .constant(.init()), viewModel: .init(user: .init()))
 }

@@ -15,20 +15,23 @@ struct TableCell: View {
             VStack(alignment: .center) {
                 Text(viewModel.numberDesciption)
                     .font(.custom("Montserrat-Bold", size: 16))
-                    .foregroundColor(Color.black)
-                   
-                Text(viewModel.guestDescription)
-                    .customStyle()
-                    .padding(12)
-                    
-                Text(viewModel.cashDescription)
-                    .customStyle()
-                    
+                    .foregroundColor(Color.white)
+                Group {
+                    if viewModel.isFree {
+                        Text("Свободен")
+                            .customStyle()
+                            .padding(12)
+                    } else {
+                        Text(viewModel.guestDescription)
+                            .customStyle()
+                            .padding(12)
+                        Text(viewModel.cashDescription)
+                            .customStyle()
+                    }
+                }
             }
             
-            .frame(width: 180, height: 180)
-            .background(Color.table1)
-            .clipShape(.rect(cornerRadius: 20))
+            .frame(maxWidth: .infinity, minHeight: 180)
         }
     }
 }
@@ -37,7 +40,7 @@ struct StyleViewModifire: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.custom("Montserrat-Regular", size: 16))
-            .foregroundColor(Color.black)
+            .foregroundColor(Color.white)
     }
 }
 
@@ -46,5 +49,5 @@ extension View {
 }
 
 #Preview {
-    TableCell(viewModel: .init(table: Table()))
+    TableCell(viewModel: .init(table: Table(dishes: [])))
 }
