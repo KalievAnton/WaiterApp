@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class Dish: Identifiable {
     let id: String = UUID().uuidString
     let title: String

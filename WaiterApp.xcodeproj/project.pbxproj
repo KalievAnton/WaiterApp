@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E20383402D0AEA5B0082DDC4 /* TableDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E203833F2D0AEA5B0082DDC4 /* TableDetailViewModel.swift */; };
+		E20383422D0AEB020082DDC4 /* TableDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20383412D0AEB020082DDC4 /* TableDetailView.swift */; };
+		E20383442D0AF45E0082DDC4 /* DishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20383432D0AF45E0082DDC4 /* DishCell.swift */; };
+		E20383462D0AF4A40082DDC4 /* DishCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20383452D0AF4A40082DDC4 /* DishCellViewModel.swift */; };
 		E219FF202CFC6F4000530843 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219FF1F2CFC6F4000530843 /* Error.swift */; };
 		E29C69E32CFDAEAD0052888F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C69E22CFDAEAD0052888F /* User.swift */; };
 		E29C69E52CFDAF070052888F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C69E42CFDAF070052888F /* AuthViewModel.swift */; };
@@ -27,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E203833F2D0AEA5B0082DDC4 /* TableDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDetailViewModel.swift; sourceTree = "<group>"; };
+		E20383412D0AEB020082DDC4 /* TableDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDetailView.swift; sourceTree = "<group>"; };
+		E20383432D0AF45E0082DDC4 /* DishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCell.swift; sourceTree = "<group>"; };
+		E20383452D0AF4A40082DDC4 /* DishCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCellViewModel.swift; sourceTree = "<group>"; };
 		E219FF1F2CFC6F4000530843 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		E29C69E22CFDAEAD0052888F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E29C69E42CFDAF070052888F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -83,6 +91,7 @@
 				E2C240CE2D0463F1003FC4B1 /* Coordinator.swift */,
 				E29C69E42CFDAF070052888F /* AuthViewModel.swift */,
 				E2A59A2A2D01F1C4001EB7D5 /* TableViewModel.swift */,
+				E203833F2D0AEA5B0082DDC4 /* TableDetailViewModel.swift */,
 				E2C240D22D0479CC003FC4B1 /* Components */,
 			);
 			path = ViewModel;
@@ -102,6 +111,7 @@
 				E2F712E72CF2344C008AD714 /* RouteView.swift */,
 				E29C69ED2CFE11350052888F /* TableView.swift */,
 				E29C69EC2CFE11350052888F /* AuthView.swift */,
+				E20383412D0AEB020082DDC4 /* TableDetailView.swift */,
 				E2A59A272D01F131001EB7D5 /* Components */,
 			);
 			path = View;
@@ -111,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				E2A59A282D01F175001EB7D5 /* TableCell.swift */,
+				E20383432D0AF45E0082DDC4 /* DishCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -119,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				E2C240D02D047826003FC4B1 /* TableCellViewModel.swift */,
+				E20383452D0AF4A40082DDC4 /* DishCellViewModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -249,15 +261,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2A59A292D01F175001EB7D5 /* TableCell.swift in Sources */,
+				E20383442D0AF45E0082DDC4 /* DishCell.swift in Sources */,
 				E29C69E32CFDAEAD0052888F /* User.swift in Sources */,
 				E2A59A2B2D01F1C4001EB7D5 /* TableViewModel.swift in Sources */,
 				E29C69EF2CFE11350052888F /* AuthView.swift in Sources */,
+				E20383462D0AF4A40082DDC4 /* DishCellViewModel.swift in Sources */,
 				E29C69F02CFE11350052888F /* TableView.swift in Sources */,
 				E2A59A262D01ED68001EB7D5 /* Table.swift in Sources */,
 				E2F712EA2CF2344C008AD714 /* RouteView.swift in Sources */,
 				E2C240D12D047826003FC4B1 /* TableCellViewModel.swift in Sources */,
+				E20383402D0AEA5B0082DDC4 /* TableDetailViewModel.swift in Sources */,
 				E219FF202CFC6F4000530843 /* Error.swift in Sources */,
 				E2C240CF2D0463F1003FC4B1 /* Coordinator.swift in Sources */,
+				E20383422D0AEB020082DDC4 /* TableDetailView.swift in Sources */,
 				E2A59A242D01E729001EB7D5 /* Dish.swift in Sources */,
 				E29C69E52CFDAF070052888F /* AuthViewModel.swift in Sources */,
 				E2F712EB2CF2344C008AD714 /* WaiterAppApp.swift in Sources */,

@@ -8,7 +8,6 @@
 import Foundation
 
 @Observable
-
 class TableCellViewModel {
     var table: Table
     var numberDesciption: String { "Cтол \(table.number)" }

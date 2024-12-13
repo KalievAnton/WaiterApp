@@ -17,13 +17,12 @@ class TableViewModel {
         .init(number: 4, isTable: true, guest: 0, dishes: [])
     ]
     
-    init(user: User) {
-        self.user = user
-    }
-    
+    var totalTableDescription: String { "\(total) ₽"}
     var total: Int {
        table.reduce(0) { $0 + $1.cash }
     }
     
-    var totalDescription: String { "\(total) ₽"}
+    init(user: User) {
+        self.user = user
+    }
 }

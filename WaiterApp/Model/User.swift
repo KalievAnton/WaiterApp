@@ -9,5 +9,3 @@ struct User {
     var number = ""
     var pin = ""
 }
-
-

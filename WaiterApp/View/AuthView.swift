@@ -37,8 +37,7 @@ struct AuthView: View {
             if !viewModel.isAuth {
                 SecureField("Введите пин-код", text: $viewModel.user.pin)
                     .customStyleTF()
-            }
-            
+            }  
             Button {
                 switch viewModel.isAuth {
                 case true:

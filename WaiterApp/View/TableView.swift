@@ -29,7 +29,7 @@ struct TableView: View {
                     .foregroundStyle(.white)
                     .padding(.leading, 16)
                 Spacer()
-                Text(viewModel.totalDescription)
+                Text(viewModel.totalTableDescription)
                     .font(.custom("Montserrat-Bold", size: 24))
                     .foregroundStyle(.white)
                     .padding(.trailing, 16)
