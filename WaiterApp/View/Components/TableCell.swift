@@ -15,7 +15,7 @@ struct TableCell: View {
             VStack(alignment: .center) {
                 Text(viewModel.numberDesciption)
                     .font(.custom("Montserrat-Bold", size: 16))
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.black)
                 Group {
                     if viewModel.isFree {
                         Text("Свободен")
@@ -40,7 +40,7 @@ struct StyleViewModifire: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.custom("Montserrat-Regular", size: 16))
-            .foregroundColor(Color.white)
+            .foregroundColor(Color.black)
     }
 }
 

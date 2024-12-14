@@ -23,18 +23,20 @@ struct TableDetailView: View {
             HStack {
                 Text("ИТОГО:")
                     .font(.custom("Montserrat-Bold", size: 24))
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.white)
                     .padding(.leading, 16)
                 Spacer()
                 Text(viewModel.totalDishDescription)
                     .font(.custom("Montserrat-Bold", size: 24))
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.white)
                     .padding(.trailing, 16)
             }
-            //                Image(.bg)
-            //                    .resizable()
-            //                    .ignoresSafeArea()
-            //                    .scaleEffect()
+        }
+        .background {
+            Image(.bg)
+                .resizable()
+                .ignoresSafeArea()
+                .scaleEffect()
         }
     }
 }

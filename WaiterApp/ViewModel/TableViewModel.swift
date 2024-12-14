@@ -14,7 +14,7 @@ class TableViewModel {
         .init(number: 1, isTable: true,guest: 0, dishes: []),
         .init(number: 2, isTable: false, guest: 3, dishes: Dish.mockData),
         .init(number: 3, isTable: false, guest: 6, dishes: Dish.mockData),
-        .init(number: 4, isTable: true, guest: 0, dishes: [])
+        .init(number: 4, isTable: true, guest: 0, dishes: []),
     ]
     
     var totalTableDescription: String { "\(total) ₽"}
